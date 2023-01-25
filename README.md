@@ -1,5 +1,5 @@
 # Deplatforming Parler
-Code (without data) for the paper: Deplatforming did not decrease Parler users’ activity on fringe social media
+Code (without data) for the paper: Deplatforming did not decrease Parler users' activity on fringe social media
 
 ~~~bibtex
 @article{hortaribeiro2023parler,
