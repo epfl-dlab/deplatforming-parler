@@ -1,0 +1,34 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+library(MatchIt)
+df_desktop <- read.csv("./data/demographics_desktop.csv")
+
+
+desk_match <- matchit(is_treat ~ Women + Black + AAPI + AIAN + Hispanic + HS_or_less + Some_college +
+                          College_graduate + inc0to25k + inc25to50k + inc50to75k + inc75to100k + pre_fringe_all +
+                      pct_18_20+pct_21_44 + pct_45_64 + pct_65p, data = df_desktop, method = "cem", cutpoints= list(pre_fringe_all="scott"))
+desk_match_data <- match.data(desk_match)
+summary(desk_match, un = FALSE)
+plot(summary(desk_match))
+write.csv(desk_match_data,"/data/deplatforming/data/desk.csv")
+```
+
+```{r}
+library(MatchIt)
+df_desktop <- read.csv("./data/demographics_mobile.csv")
+
+
+desk_match <- matchit(is_treat ~  Women + Black + AAPI + AIAN + Hispanic + HS_or_less + Some_college + 
+                          College_graduate + inc0to25k + inc25to50k + inc50to75k + inc75to100k + pre_fringe_all +
+                      pct_18_20+pct_21_44 + pct_45_64 + pct_65p, data = df_desktop, method = "cem", cutpoints= list(pre_fringe_all="scott"))
+desk_match_data <- match.data(desk_match)
+summary(desk_match, un = FALSE)
+plot(summary(desk_match))
+write.csv(desk_match_data,"/data/deplatforming/data/mob.csv")
+```
