@@ -1,7 +1,7 @@
 # Deplatforming Parler
 Code (without data) for the paper: Deplatforming did not decrease Parler users’ activity on fringe social media
 
-~~bibtex
+~~~bibtex
 @article{hortaribeiro2023parler,
   title={Deplatforming did not decrease Parler users’ activity on fringe social media},
   author={Manoel Horta Ribeiro, Homa Hosseinmardi, Robert West, Duncan J. Watts},
